@@ -52,6 +52,22 @@
 			);
 			target = 3172DDB72EF0F78300698910 /* OutbreakMatches */;
 		};
+		3172DE1D2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Helper/TableViewCell+Helper.swift",
+				Views/MatchTableViewCell.swift,
+			);
+			target = 3172DDCD2EF0F78500698910 /* OutbreakMatchesTests */;
+		};
+		3172DE1E2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Helper/TableViewCell+Helper.swift",
+				Views/MatchTableViewCell.swift,
+			);
+			target = 3172DDD72EF0F78500698910 /* OutbreakMatchesUITests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,6 +75,8 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				3172DDE02EF0F78500698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatches" target */,
+				3172DE1D2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesTests" target */,
+				3172DE1E2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesUITests" target */,
 			);
 			path = OutbreakMatches;
 			sourceTree = "<group>";
