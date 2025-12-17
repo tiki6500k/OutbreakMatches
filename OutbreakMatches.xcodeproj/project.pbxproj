@@ -55,16 +55,30 @@
 		3172DE1D2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Helper/TableViewCell+Helper.swift",
-				Views/MatchTableViewCell.swift,
+				"Helper/Foundation+Helper.swift",
+				"Helper/UIKit+Helper.swift",
+				Model/Match.swift,
+				Model/Odds.swift,
+				Service/MatchAPIService.swift,
+				Service/OddsWebSocketSimulator.swift,
+				Store/MatchStore.swift,
+				View/MatchTableViewCell.swift,
+				ViewModel/MatchViewModel.swift,
 			);
 			target = 3172DDCD2EF0F78500698910 /* OutbreakMatchesTests */;
 		};
 		3172DE1E2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Helper/TableViewCell+Helper.swift",
-				Views/MatchTableViewCell.swift,
+				"Helper/Foundation+Helper.swift",
+				"Helper/UIKit+Helper.swift",
+				Model/Match.swift,
+				Model/Odds.swift,
+				Service/MatchAPIService.swift,
+				Service/OddsWebSocketSimulator.swift,
+				Store/MatchStore.swift,
+				View/MatchTableViewCell.swift,
+				ViewModel/MatchViewModel.swift,
 			);
 			target = 3172DDD72EF0F78500698910 /* OutbreakMatchesUITests */;
 		};

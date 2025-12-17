@@ -33,3 +33,15 @@ extension UITableViewCell {
         return cell
     }
 }
+
+extension UILabel {
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        animation.timingFunction = CAMediaTimingFunction(name: .linear)
+        animation.duration = 0.3 // 0.3 section for animation
+        
+        animation.values = [0, -5, 5, -5, 5, -2, 2, 0]
+        
+        self.layer.add(animation, forKey: "shake")
+    }
+}

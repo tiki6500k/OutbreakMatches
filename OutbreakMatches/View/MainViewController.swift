@@ -15,7 +15,10 @@ class MainViewController: UIViewController {
         
         setupUI()
         bind()
+        viewModel.load()
     }
+    
+    private let viewModel = MatchViewModel()
     
     private let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -44,17 +47,15 @@ class MainViewController: UIViewController {
     }()
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        viewModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MatchTableViewCell.use(table: tableView, for: indexPath)
+        
+        cell.match = viewModel.match(at: indexPath.row)
         
         return cell
     }
@@ -80,7 +81,6 @@ private extension MainViewController {
     }
     
     func setupTableView() {
-        tableView.delegate = self
         tableView.dataSource = self
         stackView.addArrangedSubview(tableView)
     }
@@ -89,6 +89,12 @@ private extension MainViewController {
 
 private extension MainViewController {
     func bind() {
+        viewModel.onInitialLoad = { [weak self] in
+            self?.tableView.reloadData()
+        }
         
+        viewModel.onOddsUpdate = { [weak self] indexPath in
+            self?.tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
 }

@@ -9,6 +9,31 @@ import UIKit
 
 class MatchTableViewCell: UITableViewCell {
     
+    var match: Match? {
+        didSet {
+            guard let match = match else { return }
+            
+            print("🥸", "\(match.id)",
+                  "[\(match.teamA)]", match.teamAOdds,
+                  "[\(match.teamB)]", match.teamBOdds)
+            
+            matchIDLabel.text = "\(match.id)"
+            dateLabel.text = match.startTime.iso8601
+            homeTeamLabel.text = match.teamA
+            awayTeamLabel.text = match.teamB
+            
+            if homeTeamOddsLabel.text != match.teamAOdds.formattedNumber() {
+                homeTeamOddsLabel.shake()
+            }
+            homeTeamOddsLabel.text = "\(match.teamAOdds.formattedNumber())"
+            
+            if awayTeamOddsLabel.text != match.teamBOdds.formattedNumber() {
+                awayTeamOddsLabel.shake()
+            }
+            awayTeamOddsLabel.text = "\(match.teamBOdds.formattedNumber())"
+        }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -22,7 +47,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let matchIDLabel: UILabel = {
         let label = UILabel()
-        label.text = "1001"
+        label.text = ""
         label.font = .systemFont(ofSize: 14, weight: .regular)
         
         return label
@@ -30,7 +55,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let dateLabel: UILabel = {
         let label = UILabel()
-        label.text = "2025-07-04T13:00:00Z"
+        label.text = ""
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .secondaryLabel
         
@@ -46,7 +71,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let homeTeamLabel: UILabel = {
         let label = UILabel()
-        label.text = "Eagles"
+        label.text = ""
         label.font = .systemFont(ofSize: 14, weight: .regular)
         
         return label
@@ -54,7 +79,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let homeTeamOddsLabel: UILabel = {
         let label = UILabel()
-        label.text = "1.95"
+        label.text = ""
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .secondaryLabel
         
@@ -70,7 +95,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let awayTeamLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tigers"
+        label.text = ""
         label.font = .systemFont(ofSize: 14, weight: .regular)
         
         return label
@@ -78,7 +103,7 @@ class MatchTableViewCell: UITableViewCell {
     
     private let awayTeamOddsLabel: UILabel = {
         let label = UILabel()
-        label.text = "2.10"
+        label.text = ""
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .secondaryLabel
         
@@ -131,7 +156,7 @@ private extension MatchTableViewCell {
         homeTeamContainerView.addSubview(homeTeamLabel)
         
         homeTeamLabel.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview()
             make.leading.equalToSuperview().inset(12)
             make.bottom.equalToSuperview().inset(12)
         }
