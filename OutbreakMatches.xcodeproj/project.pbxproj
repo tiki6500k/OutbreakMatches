@@ -56,6 +56,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Helper/Foundation+Helper.swift",
+				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",
 				Model/Match.swift,
 				Model/Odds.swift,
@@ -71,6 +72,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Helper/Foundation+Helper.swift",
+				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",
 				Model/Match.swift,
 				Model/Odds.swift,
@@ -467,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OutbreakMatches/Info.plist;
@@ -496,6 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OutbreakMatches/Info.plist;
