@@ -55,6 +55,8 @@
 		3172DE1D2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Cache/CachedPayload.swift,
+				Cache/MatchDataCache.swift,
 				"Helper/Foundation+Helper.swift",
 				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",
@@ -71,6 +73,8 @@
 		3172DE1E2EF0FCA900698910 /* Exceptions for "OutbreakMatches" folder in "OutbreakMatchesUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Cache/CachedPayload.swift,
+				Cache/MatchDataCache.swift,
 				"Helper/Foundation+Helper.swift",
 				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",

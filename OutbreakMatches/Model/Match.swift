@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Match: Identifiable {
+struct Match: Identifiable, Codable {
     let id: Int
     let teamA: String
     let teamB: String
