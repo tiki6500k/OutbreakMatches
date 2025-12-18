@@ -19,7 +19,15 @@ class MainViewController: UIViewController {
         viewModel.load()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        fpsMonitor.stop()
+    }
+    
     private let viewModel = MatchViewModel()
+    
+    // 檢測 FPS
     private let fpsMonitor = FPSMonitor()
     private var cancellables = Set<AnyCancellable>()
     

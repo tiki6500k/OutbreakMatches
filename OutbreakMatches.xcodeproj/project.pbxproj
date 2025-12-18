@@ -57,8 +57,8 @@
 			membershipExceptions = (
 				Cache/CachedPayload.swift,
 				Cache/MatchDataCache.swift,
+				Debug/FPSMonitor.swift,
 				"Helper/Foundation+Helper.swift",
-				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",
 				Model/Match.swift,
 				Model/Odds.swift,
@@ -75,8 +75,8 @@
 			membershipExceptions = (
 				Cache/CachedPayload.swift,
 				Cache/MatchDataCache.swift,
+				Debug/FPSMonitor.swift,
 				"Helper/Foundation+Helper.swift",
-				Helper/FPSMonitor.swift,
 				"Helper/UIKit+Helper.swift",
 				Model/Match.swift,
 				Model/Odds.swift,
